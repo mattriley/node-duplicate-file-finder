@@ -1,11 +1,13 @@
-module.exports = () => files => {
+module.exports = () => (files, filterPredicate) => {
 
-    return Object.values(files.reduce((acc, f) => {
+    const groups = Object.values(files.reduce((acc, f) => {
         const { size } = f.stats;
         const arr = acc[size] || [];
         acc[size] = arr;
         arr.push(f);
         return acc;
     }, {})); 
+
+    return groups.filter(filterPredicate);
 
 };

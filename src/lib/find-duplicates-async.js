@@ -12,15 +12,9 @@ module.exports = ({ lib, globby }) => async args => {
     }, []);
 
     files.sort((a, b) => a.stats.size - b.stats.size);
-
-    const filterGroups = groups => {
-        return groups.filter(files => {
-            return files.length > 1 && files.some(f => f.path.startsWith(sourcePath));
-        });
-    };
-
-    const groupedBySize = filterGroups(lib.groupBySize(files));
-    const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize);
-    return filterGroups(groupedByContent).map(files => files.map(f => f.path));
+    const filterPredicate = files => files.length > 1 && files.some(f => f.path.startsWith(sourcePath));
+    const groupedBySize = lib.groupBySize(files, filterPredicate);
+    const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, filterPredicate);
+    return groupedByContent.map(files => files.map(f => f.path));
 
 };
