@@ -1,1 +1,1 @@
-# Hashless File Dedupe
+# Duplicate File Finder
