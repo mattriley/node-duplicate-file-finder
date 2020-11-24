@@ -1,5 +1,5 @@
 {
-    "name": "hashless-file-dedupe",
+    "name": "duplicate-file-finder",
     "version": "0.1.0",
     "author": "Matt Riley",
     "main": "index.js",
