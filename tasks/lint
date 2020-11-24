@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npx eslint "$LINT_PATHS" $@
+npx eslint $LINT_PATHS $@
