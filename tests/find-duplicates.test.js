@@ -8,15 +8,15 @@ module.exports = ({ test }) => {
         const duplicates = await findDuplicates({ sourcePath, searchPaths });
         t.equal(duplicates, [
             [
-                { basepathIndex: 0, relpath: '/A-2-201KB.JPG' },
-                { basepathIndex: 0, relpath: '/A-1-201KB.JPG' },
-                { basepathIndex: 0, relpath: '/A/A-3-201KB.JPG' },
-                { basepathIndex: 1, relpath: '/A-3-201KB.JPG' },
-                { basepathIndex: 2, relpath: '/A-3-201KB.JPG' }
+                'test-files/source-path/A-2-201KB.JPG',
+                'test-files/source-path/A-1-201KB.JPG',
+                'test-files/source-path/A/A-3-201KB.JPG',
+                'test-files/search-path-1/A-3-201KB.JPG',
+                'test-files/search-path-2/A-3-201KB.JPG'
             ],
             [
-                { basepathIndex: 0, relpath: '/B/B-2-38KB.JPG' },
-                { basepathIndex: 0, relpath: '/B-1-38KB.JPG' }
+                'test-files/source-path/B/B-2-38KB.JPG',
+                'test-files/source-path/B-1-38KB.JPG'
             ]
         ]);
     });
