@@ -1,0 +1,13 @@
+#!/bin/bash
+
+npx c8 \
+    --check-coverage \
+    --all \
+    --include "$SRC" \
+    --reporter=text-summary \
+    --reporter=lcov \
+    --branches 98 \
+    --lines 98 \
+    --functions 98 \
+    --statements 98 \
+    ./tasks/test

@@ -1,0 +1,25 @@
+{
+    "name": "hashless-file-dedup",
+    "version": "0.1.0",
+    "author": "Matt Riley",
+    "main": "index.js",
+    "dependencies": {
+        "globby": "^11.0.1",
+        "mkdirp": "^1.0.4",
+        "module-composer": "^0.5.2"
+    },
+    "devDependencies": {
+        "c8": "^7.3.5",
+        "chokidar-cli": "^2.1.0",
+        "eslint": "^7.13.0",
+        "husky": "^4.3.0",
+        "module-indexgen": "^0.2.2",
+        "tap-mocha-reporter": "^5.0.1",
+        "zora": "^4.0.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "./task pre-commit"
+        }
+    }
+}

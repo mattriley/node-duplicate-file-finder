@@ -1,0 +1,24 @@
+#!/bin/bash
+
+./tasks/itermocil-install
+
+cat > "iTermocil.yml" <<EOF
+windows:
+  - name: $PROJECT_NAME
+    root: $(pwd)
+    layout: main-vertical
+    panes:
+      - commands:
+        - nvm use
+        - clear
+      - commands:
+        - nvm use
+        - clear
+        - ./task test-watch
+      - commands:
+        - nvm use
+        - clear
+        - ./task indexgen-watch        
+EOF
+
+itermocil

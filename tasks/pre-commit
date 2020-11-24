@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -ex
+
+./tasks/check-coupling
+./tasks/lint
+./tasks/cov-check

@@ -1,0 +1,5 @@
+node_modules
+coverage
+iTermocil.yml
+.cache
+.DS_Store
