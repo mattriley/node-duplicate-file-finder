@@ -1,8 +1,13 @@
 const path = require('path');
 
-module.exports = ({ fs, mkdirp }) => (groups, basepaths, destdir) => {
+const defaults = {
+    predicate: files => files.slice(1)
+};
 
-    const filesToMove = groups.flatMap(files => files.slice(1));
+module.exports = ({ fs, mkdirp }) => args => {
+
+    const { basepaths, duplicates, destdir, predicate } = { ...defaults, ...args };
+    const filesToMove = duplicates.flatMap(predicate);
 
     return Promise.all(filesToMove.map(async f => {
         const basepath = basepaths[f.basepathIndex];
