@@ -1,4 +1,4 @@
-const { findDuplicates, moveDuplicates } = require('..');
+const { findDuplicates } = require('..');
 
 module.exports = ({ test }) => {
     
@@ -16,13 +16,6 @@ module.exports = ({ test }) => {
                 { basepathIndex: 0, relpath: '/B-1-38KB.JPG' }
             ]
         ]);
-    });
-
-    test.skip('moves duplicates', async () => {
-        const basepaths = ['/Users/mattriley/Home/Docs/Matt/Photos/dupes'];
-        const duplicates = await findDuplicates(basepaths);
-        const destdir = '/Users/mattriley/Home/Docs/Matt/Photos/dupes2';
-        await moveDuplicates({ basepaths, duplicates, destdir });
     });
 
 };
