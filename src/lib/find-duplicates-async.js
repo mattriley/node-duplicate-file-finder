@@ -1,8 +1,12 @@
 const path = require('path');
 
-// filters to ensure only focused on basepaths[0]
+const defaults = { sourcePath: '.', searchPaths: [] };
 
-module.exports = ({ lib, globby }) => async basepaths => {
+module.exports = ({ lib, globby }) => async args => {
+
+    const { sourcePath, searchPaths } = { ...defaults, ...args };
+
+    const basepaths = [sourcePath, ...searchPaths];
 
     const files = await basepaths.reduce(async (p, basepath, i) => {
         const acc = await p;

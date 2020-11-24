@@ -1,3 +1,4 @@
 const boot = require('./boot');
-const { public } = boot();
-module.exports = public;
+const { lib } = boot();
+const { findDuplicatesAsync: findDuplicates } = lib;
+module.exports = { findDuplicates };
