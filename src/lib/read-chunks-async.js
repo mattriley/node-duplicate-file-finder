@@ -5,7 +5,7 @@ module.exports = ({ lib, config }) => files => {
         const res = await f.handle.read(f.buffer, 0, config.step, f.pos);
         const pos = f.pos + res.bytesRead;
         const done = pos === f.stats.size;
-        if (done) await f.handle.close();
+        if (done) lib.closeFiles([f]);
         return { ...f, pos, done };
     }));
     

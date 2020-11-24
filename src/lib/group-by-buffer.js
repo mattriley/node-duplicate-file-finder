@@ -10,7 +10,7 @@ module.exports = () => files => {
             const newFiles = Object.fromEntries(entries);
             files ? Object.assign(files, newFiles) : groups.push(newFiles);
         } else {
-            groups.push([{ [a.path]: a }]);
+            groups.push({ [a.path]: a });
         }
         return res;
     });
