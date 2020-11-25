@@ -1,5 +1,5 @@
 module.exports = {
-    closeFiles: require('./close-files'),
+    closeFilesAsync: require('./close-files-async'),
     findDuplicatesAsync: require('./find-duplicates-async'),
     findDuplicatesInGroupsAsync: require('./find-duplicates-in-groups-async'),
     groupByBuffer: require('./group-by-buffer'),
