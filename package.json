@@ -4,6 +4,7 @@
     "version": "0.1.0",
     "author": "Matt Riley",
     "main": "index.js",
+    "files": ["src", "boot.js", "index.js"],
     "dependencies": {
         "globby": "^11.0.1",
         "mkdirp": "^1.0.4",
