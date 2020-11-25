@@ -1,7 +1,7 @@
 {
     "name": "duplicate-file-finder",
     "description": "Finds duplicate files across given directories without hashing.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Matt Riley",
     "main": "index.js",
     "files": ["src", "boot.js", "index.js"],
