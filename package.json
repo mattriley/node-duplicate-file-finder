@@ -3,6 +3,9 @@
     "description": "Finds duplicate files across given directories without hashing.",
     "version": "0.1.2",
     "author": "Matt Riley",
+    "license": "ISC",
+    "homepage": "https://github.com/mattriley/duplicate-file-finder",
+    "repository": "github:mattriley/duplicate-file-finder",
     "main": "index.js",
     "files": ["src", "boot.js", "index.js"],
     "dependencies": {
@@ -23,5 +26,8 @@
         "hooks": {
             "pre-commit": "./task pre-commit"
         }
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
