@@ -1,8 +1,8 @@
-const defaults = { sourcePath: '.', searchPaths: [] };
+const defaults = { sourcePath: '.', searchPaths: [], objectMode: false };
 
 module.exports = ({ lib, globby }) => async args => {
 
-    const { sourcePath, searchPaths } = { ...defaults, ...args };
+    const { sourcePath, searchPaths, objectMode } = { ...defaults, ...args };
     const basepaths = [sourcePath, ...searchPaths];
 
     const files = await basepaths.reduce(async (p, basepath) => {
@@ -15,6 +15,6 @@ module.exports = ({ lib, globby }) => async args => {
     const filterPredicate = files => files.length > 1 && files.some(f => f.path.startsWith(sourcePath));
     const groupedBySize = lib.groupBySize(files, filterPredicate);
     const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, filterPredicate);
-    return lib.pathOnly(groupedByContent);
+    return lib.transformResult(groupedByContent, objectMode);
 
 };
