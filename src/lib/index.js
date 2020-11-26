@@ -5,5 +5,6 @@ module.exports = {
     groupByBuffer: require('./group-by-buffer'),
     groupBySize: require('./group-by-size'),
     openFileAsync: require('./open-file-async'),
+    pathOnly: require('./path-only'),
     readChunksAsync: require('./read-chunks-async')
 };

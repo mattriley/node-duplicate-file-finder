@@ -15,6 +15,6 @@ module.exports = ({ lib, globby }) => async args => {
     const filterPredicate = files => files.length > 1 && files.some(f => f.path.startsWith(sourcePath));
     const groupedBySize = lib.groupBySize(files, filterPredicate);
     const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, filterPredicate);
-    return groupedByContent.map(files => files.map(f => f.path));
+    return lib.pathOnly(groupedByContent);
 
 };
