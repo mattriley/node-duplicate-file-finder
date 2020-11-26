@@ -12,12 +12,10 @@ module.exports = ({ lib }) => async (groups, filterPredicate) => {
     };
     
     while (queue.length) {
-        const next = queue.pop();
-        const files = await lib.readChunksAsync(next);
-        const groupedByContent = await lib.groupByBuffer(files);
-
-        const [keep, discard] = partition(groupedByContent);
-        await Promise.all(discard.map(lib.closeFilesAsync));
+        const files = await lib.readChunksAsync(queue.pop());
+        const groups = await lib.groupByBuffer(files);
+        const [keep, drop] = partition(groups);
+        await Promise.all(drop.map(lib.closeFilesAsync));
         keep.forEach(files => {
             const done = files.every(f => f.done);
             const dest = done ? results : queue;
