@@ -11,7 +11,7 @@ module.exports = () => files => {
     [...files].sort((a, b) => {
         const res = Buffer.compare(a.buffer, b.buffer);
         if (res === 0) {
-            const map = maps.find(map => map.has(a.path) || map.has(b.path)) || addMap();
+            const map = maps.find(map => map.has(b.path)) || addMap();
             map.set(a.path, a).set(b.path, b);
         }
         return res;
