@@ -1,8 +1,10 @@
+const { join } = require('path');
+
 module.exports = () => (groups, objectMode) => {
 
     return groups.map(files => files.map(f => {
-        const { path, stats } = f;
-        return objectMode ? { path, stats } : path;
+        const { name, base, path, stats } = f;
+        return objectMode ? { name, base, path, stats } : join(base, path);
     }));
 
 };
