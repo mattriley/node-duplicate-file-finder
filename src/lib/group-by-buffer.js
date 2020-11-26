@@ -11,11 +11,18 @@ module.exports = () => files => {
 
     [...files].sort((a, b) => {
         const res = Buffer.compare(a.buffer, b.buffer);
-        const files = res === 0 ? [a, b] : [a];
-        addFiles(files);
+        if (res === 0) addFiles([a, b]);
         return res;
     });
 
+    const duplicatePaths = Object.assign({}, ...groups);
+
+    const notDuplicates = files.filter(f => !duplicatePaths[f.path]);
+
+    notDuplicates.forEach(f => {
+        groups.push({ [f.path]: f });
+    });
+    
     return groups.map(files => Object.values(files));
     
 };
