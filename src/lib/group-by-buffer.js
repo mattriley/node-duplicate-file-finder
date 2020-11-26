@@ -1,28 +1,27 @@
 module.exports = () => files => {
 
-    const groups = [];
+    const maps = [];
 
-    const addFiles = files1 => {
-        const entries = files1.map(f => [f.path, f]);
-        const files = groups.find(files => entries.some(([path]) => files[path]));
-        const newFiles = Object.fromEntries(entries);
-        files ? Object.assign(files, newFiles) : groups.push(newFiles);
+    const addMap = () => {
+        const map = new Map();
+        maps.push(map);
+        return map;
     };
 
     [...files].sort((a, b) => {
         const res = Buffer.compare(a.buffer, b.buffer);
-        if (res === 0) addFiles([a, b]);
+        if (res === 0) {
+            const map = maps.find(map => map.has(a.path) || map.has(b.path)) || addMap();
+            map.set(a.path, a).set(b.path, b);
+        }
         return res;
+    }); 
+
+    files.forEach(f => {
+        const exists = maps.some(map => map.has(f.path));
+        if (!exists) addMap().set(f.path, f);
     });
 
-    const duplicatePaths = Object.assign({}, ...groups);
-
-    const notDuplicates = files.filter(f => !duplicatePaths[f.path]);
-
-    notDuplicates.forEach(f => {
-        groups.push({ [f.path]: f });
-    });
-    
-    return groups.map(files => Object.values(files));
+    return maps.map(map => [...map.values()]);
     
 };
