@@ -2,6 +2,7 @@ module.exports = {
     closeFilesAsync: require('./close-files-async'),
     findDuplicatesAsync: require('./find-duplicates-async'),
     findDuplicatesInGroupsAsync: require('./find-duplicates-in-groups-async'),
+    getFiles: require('./get-files'),
     groupByBuffer: require('./group-by-buffer'),
     groupBySize: require('./group-by-size'),
     openFileAsync: require('./open-file-async'),
