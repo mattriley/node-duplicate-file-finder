@@ -4,12 +4,11 @@ module.exports = ({ lib }) => getInstruction => files => {
         try {
             if (f.done) return f;
             f = await lib.openFileAsync(f);
-            const instruction = getInstruction(f);
-            const { bytesRead } = await f.handle.read(f.buffer, 0, instruction.length, instruction.position);
-            const position = f.position + bytesRead;
-            const { done } = instruction;
+            const { length, position, isDone } = getInstruction(f);
+            const readResult = await f.handle.read(f.buffer, 0, length, position);
+            const done = isDone(readResult);
             if (done) await lib.closeFilesAsync([f]);
-            return { ...f, position, done };
+            return { ...f, done };
         } catch (err) {
             err.context = { f };
             throw err;

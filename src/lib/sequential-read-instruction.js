@@ -1,8 +1,9 @@
-module.exports = ({ config }) => f => {
+module.exports = ({ config }) => () => {
 
-    const { position, size } = f;
-    const { length } = config;
-    const done = position + length >= size;
-    return { position, length, done };
+    return { 
+        position: null, 
+        length: config.length,
+        isDone: ({ bytesRead }) => bytesRead === 0 
+    };
 
 };
