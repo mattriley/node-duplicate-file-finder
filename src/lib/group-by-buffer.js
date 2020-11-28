@@ -8,14 +8,19 @@ module.exports = () => files => {
         return map;
     };
 
-    [...files].sort((a, b) => {
-        const res = Buffer.compare(a.buffer, b.buffer);
-        if (res === 0) {
-            const map = maps.find(map => map.has(b.path)) || addMap();
-            map.set(a.path, a).set(b.path, b);
+    const addToMap = (a, b) => {
+        const map = maps.find(map => map.has(a.path) || map.has(b.path)) || addMap();
+        map.set(a.path, a).set(b.path, b);
+    };
+
+    for (let i = 0; i < files.length; i++) {
+        for (let j = i + 1; j < files.length; j++) {
+            const a = files[i];
+            const b = files[j];
+            const same = Buffer.compare(a.buffer, b.buffer) === 0;
+            if (same) addToMap(a, b);
         }
-        return res;
-    }); 
+    }
 
     files.forEach(f => {
         const exists = maps.some(map => map.has(f.path));
