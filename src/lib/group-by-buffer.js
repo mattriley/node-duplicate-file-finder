@@ -1,5 +1,6 @@
 module.exports = () => files => {
 
+    const flatmap = new Map();
     const maps = [];
 
     const addMap = () => {
@@ -11,6 +12,7 @@ module.exports = () => files => {
     const addToMap = (a, b) => {
         const map = maps.find(map => map.has(a.path) || map.has(b.path)) || addMap();
         map.set(a.path, a).set(b.path, b);
+        flatmap.set(a.path, a).set(b.path, b);
     };
 
     for (let i = 0; i < files.length; i++) {
@@ -23,8 +25,7 @@ module.exports = () => files => {
     }
 
     files.forEach(f => {
-        const exists = maps.some(map => map.has(f.path));
-        if (!exists) addMap().set(f.path, f);
+        if (!flatmap.has(f.path)) addMap().set(f.path, f);
     });
 
     return maps.map(map => [...map.values()]);
