@@ -7,7 +7,8 @@ module.exports = ({ lib }) => async args => {
     const files = await lib.getFiles(basepaths);
     const filterPredicate = files => files.length > 1 && files.some(f => f.basepath === sourcePath);
     const groupedBySize = lib.groupBySize(files, filterPredicate);
-    const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, filterPredicate, args.getInstruction);
+    const readChunksAsync = lib.readChunksAsync(args.getInstruction || lib.sequentialReadInstruction);
+    const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, readChunksAsync, filterPredicate);
     return lib.transformResult(groupedByContent, objectMode);
 
 };

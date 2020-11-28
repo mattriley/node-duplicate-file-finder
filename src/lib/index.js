@@ -8,5 +8,6 @@ module.exports = {
     openFileAsync: require('./open-file-async'),
     pathOnly: require('./path-only'),
     readChunksAsync: require('./read-chunks-async'),
+    sequentialReadInstruction: require('./sequential-read-instruction'),
     transformResult: require('./transform-result')
 };

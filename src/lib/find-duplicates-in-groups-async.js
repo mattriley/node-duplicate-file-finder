@@ -1,6 +1,6 @@
-module.exports = ({ lib }) => async (groups, filterPredicate, getInstruction) => {
+module.exports = ({ lib }) => async (groups, readChunksAsync, filterPredicate) => {
 
-    const queue = [...groups];
+    const stack = [...groups];
     const results = [];
 
     const partition = groups => {
@@ -11,14 +11,14 @@ module.exports = ({ lib }) => async (groups, filterPredicate, getInstruction) =>
         }, [[], []]);
     };
     
-    while (queue.length) {
-        const files = await lib.readChunksAsync(queue.pop(), getInstruction);
+    while (stack.length) {
+        const files = await readChunksAsync(stack.pop());
         const groups = await lib.groupByBuffer(files);
         const [keep, drop] = partition(groups);
         await Promise.all(drop.map(lib.closeFilesAsync));
         keep.forEach(files => {
             const done = files.every(f => f.done);
-            const dest = done ? results : queue;
+            const dest = done ? results : stack;
             dest.push(files);
         });
     }
