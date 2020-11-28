@@ -7,7 +7,8 @@ module.exports = ({ globby }) => async basepaths => {
         return files.map(f => {
             const relpath = f.path;
             const path = join(basepath, relpath);
-            return { ...f, basepath, relpath, path };
+            const { size } = f.stats;
+            return { ...f, basepath, relpath, path, size };
         });
     }));
 

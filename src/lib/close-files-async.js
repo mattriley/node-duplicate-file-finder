@@ -1,5 +1,9 @@
 module.exports = () => files => {
 
-    return Promise.all(files.map(f => f.handle.close()));
+    return Promise.all(files.map(async f => {
+        if (f.closed) return;
+        await f.handle.close();
+        Object.assign(f, { closed: true });
+    }));
 
 };
