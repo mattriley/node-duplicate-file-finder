@@ -8,7 +8,8 @@ module.exports = (overrides = {}) => {
 
     const compose = composer(src, { overrides });
     const config = compose('config');
-    compose('lib', { strategies, config, fs, globby, mkdirp });
+    const lib = compose('lib', { strategies, config, fs, globby, mkdirp });
+    compose('commands', { strategies, lib });
     return compose.getModules();
 
 };
