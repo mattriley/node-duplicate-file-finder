@@ -1,8 +1,9 @@
-module.exports = ({ fs }) => async (f, bufferSize) => {
+module.exports = ({ fs }) => async (f, getStrategy) => {
 
     if (f.handle) return f;
+    const strategy = getStrategy(f);
+    const buffer = Buffer.alloc(strategy.getBufferSize());
     const handle = await fs.promises.open(f.path, 'r');
-    const buffer = Buffer.alloc(bufferSize);
-    return { ...f, handle, buffer };
+    return { ...f, strategy, buffer, handle };
 
 };
