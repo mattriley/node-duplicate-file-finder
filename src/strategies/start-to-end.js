@@ -1,4 +1,4 @@
-module.exports = ({ chunkSize }) => {
+module.exports = ({ chunkSize }) => () => {
     
     const next = () => ({ position: null, length: chunkSize });
     const isDone = ({ bytesRead }) => bytesRead === 0; 

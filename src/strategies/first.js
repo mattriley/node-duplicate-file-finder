@@ -1,4 +1,4 @@
-module.exports = ({ chunkSize }) => {
+module.exports = ({ chunkSize }) => () => {
     
     const next = () => ({ position: 0, length: chunkSize });
     const isDone = () => true; 
