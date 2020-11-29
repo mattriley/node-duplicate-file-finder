@@ -8,7 +8,8 @@ module.exports = ({ strategies, lib }) => async args => {
     const filterPredicate = files => files.length > 1 && files.some(f => f.basepath === sourcePath);
     const groupedBySize = lib.groupBySize(files, filterPredicate);
     const defaultStrategy = strategies.startToEnd({ chunkSize: 8192 });
-    const readChunksAsync = lib.readChunksAsync(args.strategy || defaultStrategy);
+    const getStrategy = args.getStrategy || (() => defaultStrategy);
+    const readChunksAsync = lib.readChunksAsync(getStrategy);
     const groupedByContent = await lib.findDuplicatesInGroupsAsync(groupedBySize, readChunksAsync, filterPredicate);
     return lib.transformResult(groupedByContent, objectMode);
 
