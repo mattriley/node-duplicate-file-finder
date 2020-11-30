@@ -1,11 +1,6 @@
-module.exports = ({ length, bufferSize }) => f => {
+module.exports = ({ strategies }) => ({ length, bufferSize }) => f => {
     
-    let position = f.size - chunkSize;
-    const chunkSize = Math.trunc(length / bufferSize);
-    const nextRead = () => ({ position, length: chunkSize });
-    const onRead = ({ bytesRead }) => { position += bytesRead; };
-    const isDone = () => position >= f.size;
-    const getBufferSize = () => bufferSize;
-    return { getBufferSize, nextRead, onRead, isDone };
+    const position = f.size - length;
+    return strategies.section({ position, length, bufferSize })(f);
 
 };

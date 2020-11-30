@@ -1,3 +1,3 @@
 const boot = require('./boot');
-const { commands } = boot();
-module.exports = commands;
+const { commands, strategies } = boot();
+module.exports = { ...commands, strategies };
