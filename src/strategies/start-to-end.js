@@ -1,8 +1,10 @@
 module.exports = ({ chunkSize }) => () => {
     
-    const next = () => ({ position: null, length: chunkSize });
-    const isDone = ({ bytesRead }) => bytesRead === 0; 
+    let done = false;
+    const nextRead = () => ({ position: null, length: chunkSize });
+    const onRead = ({ bytesRead }) => { done = bytesRead === 0; };
     const getBufferSize = () => chunkSize;
-    return { getBufferSize, next, isDone };
+    const isDone = () => done;
+    return { getBufferSize, nextRead, onRead, isDone };
 
 };

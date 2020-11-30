@@ -1,8 +1,11 @@
-module.exports = ({ chunkSize }) => () => {
+module.exports = ({ length, bufferSize }) => () => {
     
-    const next = () => ({ position: 0, length: chunkSize });
-    const isDone = () => true; 
-    const getBufferSize = () => chunkSize;
-    return { getBufferSize, next, isDone };
+    let position = 0;
+    const chunkSize = Math.trunc(length / bufferSize);
+    const nextRead = () => ({ position, length: chunkSize });
+    const onRead = ({ bytesRead }) => { position += bytesRead; };
+    const isDone = () => position >= length;
+    const getBufferSize = () => bufferSize;
+    return { getBufferSize, nextRead, onRead, isDone };
 
 };
