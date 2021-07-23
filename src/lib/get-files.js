@@ -1,4 +1,4 @@
-const { join } = require('path');
+const path = require('path');
 
 module.exports = ({ globby }) => async basepaths => {
 
@@ -6,9 +6,16 @@ module.exports = ({ globby }) => async basepaths => {
         const files = await globby('**', { cwd: basepath, stats: true });
         return files.map(f => {
             const relpath = f.path;
-            const path = join(basepath, relpath);
-            const { size } = f.stats;
-            return { ...f, basepath, relpath, path, size };
+            return { 
+                ...f, 
+                basepath, 
+                name: path.basename(relpath), 
+                ext: path.extname(relpath).replace('.', ''), 
+                relpath, 
+                reldirpath: path.dirname(relpath), 
+                path: path.join(basepath, relpath), 
+                size: f.stats.size 
+            };
         });
     }));
 
