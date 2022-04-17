@@ -1,3 +1,1 @@
-const boot = require('./src/boot');
-const { commands, strategies } = boot();
-module.exports = { ...commands, strategies };
+module.exports = require('./src/app');
