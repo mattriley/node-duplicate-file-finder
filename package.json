@@ -7,11 +7,15 @@
     "homepage": "https://github.com/mattriley/duplicate-file-finder",
     "repository": "github:mattriley/duplicate-file-finder",
     "main": "index.js",
-    "files": ["src", "boot.js", "index.js"],
+    "files": [
+        "src",
+        "boot.js",
+        "index.js"
+    ],
     "dependencies": {
         "globby": "^11.0.1",
         "mkdirp": "^1.0.4",
-        "module-composer": "^0.5.2"
+        "module-composer": "^0.10.0"
     },
     "devDependencies": {
         "c8": "^7.3.5",
