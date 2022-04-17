@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-const { createHarness } = require('zora');
+const { createHarness, createJSONReporter } = require('zora');
 const path = require('path');
 
 const files = process.argv.slice(2);
@@ -18,10 +18,10 @@ const runTests = filePath => {
 
 const start = async () => {
     let uncaughtError = null;
-    
+
     try {
         files.forEach(runTests);
-        await testHarness.report();
+        await testHarness.report({ reporter: createJSONReporter() });
     } catch (e) {
         console.error(e);
         uncaughtError = e;
