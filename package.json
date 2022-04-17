@@ -15,7 +15,7 @@
         "test": "./task test"
     },
     "dependencies": {
-        "globby": "^11.0.1",
+        "fast-glob": "^3.2.11",
         "mkdirp": "^1.0.4",
         "module-composer": "^0.10.0"
     },
