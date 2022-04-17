@@ -23,7 +23,7 @@
     "devDependencies": {
         "c8": "^7.3.5",
         "chokidar-cli": "^3.0.0",
-        "eslint": "^7.13.0",
+        "eslint": "^8.13.0",
         "husky": "^4.3.0",
         "module-indexgen": "^0.2.2",
         "tap-mocha-reporter": "^5.0.1",
