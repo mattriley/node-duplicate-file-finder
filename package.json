@@ -28,11 +28,6 @@
         "zora": "^5.0.3",
         "zora-reporters": "^1.3.2"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "./task pre-commit"
-        }
-    },
     "publishConfig": {
         "access": "public"
     }
