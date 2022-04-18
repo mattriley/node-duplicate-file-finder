@@ -1,5 +1,6 @@
 node_modules
 coverage
 iTermocil.yml
+package-lock.json
 .cache
 .DS_Store
