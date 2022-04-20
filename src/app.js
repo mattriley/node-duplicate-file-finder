@@ -1,3 +1,3 @@
-const boot = require('./boot');
-const { commands, strategies } = boot();
+const compose = require('./compose');
+const { commands, strategies } = compose();
 module.exports = { ...commands, strategies };
