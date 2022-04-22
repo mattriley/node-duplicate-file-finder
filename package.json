@@ -1,32 +1,32 @@
 {
     "name": "duplicate-file-finder",
-    "description": "Finds duplicate files across given directories without hashing.",
     "version": "0.2.0",
+    "description": "Finds duplicate files across given directories without hashing.",
     "author": "Matt Riley",
     "license": "ISC",
-    "homepage": "https://github.com/mattriley/duplicate-file-finder",
     "repository": "github:mattriley/duplicate-file-finder",
     "main": "index.js",
-    "files": [
-        "src",
-        "index.js"
-    ],
     "scripts": {
         "test": "./task test"
     },
     "dependencies": {
         "fast-glob": "^3.2.11",
-        "module-composer": "^0.11.0"
+        "module-composer": "^0.13.0"
     },
     "devDependencies": {
         "c8": "^7.3.5",
         "chokidar-cli": "^3.0.0",
         "eslint": "^8.13.0",
         "husky": "^7.0.4",
-        "module-indexgen": "^0.3.7",
+        "module-indexgen": "^0.9.0",
         "zora": "^5.0.3",
         "zora-reporters": "^1.3.2"
     },
+    "homepage": "https://github.com/mattriley/duplicate-file-finder",
+    "files": [
+        "src",
+        "index.js"
+    ],
     "publishConfig": {
         "access": "public"
     }

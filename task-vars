@@ -1,9 +1,6 @@
 #!/bin/bash
 
-export PROJECT_NAME="duplicate-file-finder"
-export SRC="src"
-export MODULES="$SRC/modules"
-export TESTS="tests"
-export TEST_WATCH_PATTERN="{$SRC,$TESTS}/**/*.js"
-export INDEXGEN_PATHS="$MODULES"
-export LINT_PATHS="$SRC $TESTS"
+export COV_BRANCHES=80
+export COV_LINES=80
+export COV_FUNCTIONS=80
+export COV_STATEMENTS=80
