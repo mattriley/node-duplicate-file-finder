@@ -5,7 +5,12 @@
     "author": "Matt Riley",
     "license": "ISC",
     "repository": "github:mattriley/duplicate-file-finder",
+    "homepage": "https://github.com/mattriley/duplicate-file-finder",
     "main": "./src/app.js",
+    "files": [
+        "src",
+        "index.js"
+    ],
     "scripts": {
         "test": "./task test"
     },
@@ -18,15 +23,10 @@
         "chokidar-cli": "^3.0.0",
         "eslint": "^8.13.0",
         "husky": "^7.0.4",
-        "module-indexgen": "^0.9.0",
+        "module-indexgen": "^0.9.6",
         "zora": "^5.0.3",
         "zora-reporters": "^1.3.2"
     },
-    "homepage": "https://github.com/mattriley/duplicate-file-finder",
-    "files": [
-        "src",
-        "index.js"
-    ],
     "publishConfig": {
         "access": "public"
     }
