@@ -1,3 +1,0 @@
-#!/bin/bash
-
-! grep --exclude="index.js" -rnw "$MODULES" -e "require('."

@@ -1,7 +1,5 @@
 #!/bin/bash
+  
+. ./task-vars
 
-npx c8 \
-    --all \
-    --include "$SRC" \
-    --reporter=text-summary \
-    ./tasks/test
+./tasks/lib/cov-c8

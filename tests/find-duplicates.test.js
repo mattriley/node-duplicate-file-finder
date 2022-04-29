@@ -1,7 +1,7 @@
 const { findDuplicates } = require('..');
 
 module.exports = ({ test }) => {
-    
+
     test('finds duplicates', async t => {
         const sourcePath = 'test-files/source-path';
         const searchPaths = ['test-files/search-path-1', 'test-files/search-path-2'];
