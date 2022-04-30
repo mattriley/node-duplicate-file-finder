@@ -2,4 +2,5 @@
   
 . ./task-vars
 
-./tasks/lib/itermocil
+./task cov-c8
+./task cov-open
