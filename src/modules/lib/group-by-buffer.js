@@ -1,3 +1,5 @@
+const { Buffer } = require('buffer');
+
 module.exports = () => files => {
 
     const flatmap = new Map();
@@ -26,5 +28,5 @@ module.exports = () => files => {
     files.forEach(f => !flatmap.has(f.path) && push(f));
 
     return maps.map(map => [...map.values()]);
-    
+
 };

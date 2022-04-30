@@ -1,3 +1,5 @@
+const { Buffer } = require('buffer');
+
 module.exports = ({ io }) => async (f, createStrategy) => {
 
     if (f.handle) return f;
