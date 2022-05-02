@@ -1,6 +1,6 @@
 {
     "name": "duplicate-file-finder",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Finds duplicate files across given directories without hashing.",
     "author": "Matt Riley",
     "license": "ISC",
@@ -16,7 +16,7 @@
     },
     "dependencies": {
         "fast-glob": "^3.2.11",
-        "module-composer": "^0.14.1"
+        "module-composer": "^0.14.2"
     },
     "devDependencies": {
         "c8": "^7.3.5",

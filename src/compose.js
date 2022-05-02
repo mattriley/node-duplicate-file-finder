@@ -6,7 +6,7 @@ module.exports = (...configs) => {
     const { compose } = composer(modules, ...configs);
     const { strategies } = compose('strategies');
     const { io } = compose('io', {}, io => io.setup());
-    const { lib } = compose('lib', { strategies, io });
-    return compose('commands', { strategies, lib });
+    const { services } = compose('services', { strategies, io });
+    return compose('commands', { strategies, services });
 
 };

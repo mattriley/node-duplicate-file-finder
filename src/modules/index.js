@@ -1,6 +1,6 @@
 module.exports = {
     commands: require('./commands'),
     io: require('./io'),
-    lib: require('./lib'),
+    services: require('./services'),
     strategies: require('./strategies')
 };
