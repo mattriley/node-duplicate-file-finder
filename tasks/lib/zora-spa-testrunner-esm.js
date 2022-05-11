@@ -2,10 +2,11 @@ import JSDOM from 'jsdom';
 import { createHarness } from 'zora';
 import { createDiffReporter } from 'zora-reporters';
 import glob from 'fast-glob';
+import process from 'process';
 import path from 'path';
 import composeModules from '../../src/compose';
 import composeTesting from '../../testing/compose';
-import testConfig from '../../testing/test-config.json';
+import testConfig from '../../testing/test-config';
 
 const setup = () => {
     const { window } = new JSDOM.JSDOM('', { url: 'https://localhost/' });

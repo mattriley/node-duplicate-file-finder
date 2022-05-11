@@ -5,12 +5,6 @@ Finds duplicate files across given directories without hashing.
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Install](#install)
-- [Usage](#usage)
-- [Architecture](#architecture)
-
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Install
@@ -48,10 +42,4 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-```mermaid
-graph TD;
-    commands-->strategies;
-    commands-->services;
-    services-->strategies;
-    services-->io;
-```
+<%- moduleGraph() %>

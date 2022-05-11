@@ -2,6 +2,9 @@
   
 . ./task-vars
 
-README="README.md"
-node ./tasks/lib/readme-file-generator.js > $README
-npx doctoc --maxlevel 2 $README
+node \
+--experimental-specifier-resolution=node \
+--input-type=module \
+- "$README_TEMPLATE" < ./tasks/lib/readme-file-generator.js > "$README"
+
+npx doctoc --maxlevel 2 "$README"
