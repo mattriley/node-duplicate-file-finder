@@ -19,7 +19,6 @@
         "module-composer": "^0.15.0"
     },
     "devDependencies": {
-        "@node-loader/babel": "^2.0.1",
         "c8": "^7.3.5",
         "chokidar-cli": "^3.0.0",
         "doctoc": "^2.2.0",

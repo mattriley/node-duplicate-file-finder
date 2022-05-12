@@ -6,7 +6,6 @@
 
 node \
     --experimental-specifier-resolution=node \
-    --experimental-loader @node-loader/babel \
     --input-type=module \
     - "$README_TEMPLATE" < ./tasks/lib/readme-file-generator.js > "$README"
 
