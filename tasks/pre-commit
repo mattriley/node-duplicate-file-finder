@@ -4,5 +4,5 @@
 
 set -ex
 ./task lint
-./task cov-check
+# ./task cov-check
 ./task readme-gen
