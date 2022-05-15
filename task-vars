@@ -1,10 +1,8 @@
 #!/bin/bash
 
-. ./task-vars-default
-
 export ITERMOCIL_TASKS=("edit" "test-watch" "indexgen-watch")
 
-export COV_BRANCHES=80
-export COV_LINES=80
-export COV_FUNCTIONS=80
-export COV_STATEMENTS=80
+export COV_BRANCHES=30
+export COV_LINES=30
+export COV_FUNCTIONS=30
+export COV_STATEMENTS=30
