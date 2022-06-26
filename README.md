@@ -48,6 +48,7 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
+###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="https://github.com/mattriley/duplicate-file-finder#user-content-link-1">View it on GitHub</a></p>
 ```mermaid
 graph TD;
     commands-->strategies;

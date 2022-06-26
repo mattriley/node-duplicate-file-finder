@@ -42,4 +42,4 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-<%- moduleGraph() %>
+<%- await compose(c => renderCode(c.mermaid(), 'mermaid')) %>
