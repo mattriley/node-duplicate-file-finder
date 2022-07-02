@@ -1,5 +1,7 @@
 # Duplicate File Finder
 
+<%- lib.renderMetrics() %>
+
 Finds duplicate files across given directories without hashing.
 
 ## Table of Contents
@@ -42,4 +44,4 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-<%- await compose(c => renderCode(c.mermaid(), 'mermaid')) %>
+<%- await lib.compose(c => lib.renderCode(c.mermaid(), 'mermaid')) %>

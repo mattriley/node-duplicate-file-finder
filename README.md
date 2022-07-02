@@ -1,5 +1,10 @@
 # Duplicate File Finder
 
+<p align="right">
+    <code>87.13% cov</code>&nbsp;
+    <code>219 sloc</code>&nbsp;
+    <code>24 files</code></p>
+
 Finds duplicate files across given directories without hashing.
 
 ## Table of Contents
