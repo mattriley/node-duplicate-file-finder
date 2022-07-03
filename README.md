@@ -3,7 +3,9 @@
 <p align="right">
     <code>87.13% cov</code>&nbsp;
     <code>219 sloc</code>&nbsp;
-    <code>24 files</code></p>
+    <code>24 files</code>&nbsp;
+    <code>2 deps</code>&nbsp;
+    <code>3 dev deps</code></p>
 
 Finds duplicate files across given directories without hashing.
 
@@ -20,6 +22,7 @@ Finds duplicate files across given directories without hashing.
 
 ## Install
 
+###### <p align="right"><a href="https://www.npmjs.com/package/duplicate-file-finder">https://www.npmjs.com/package/duplicate-file-finder</a></p>
 ```
 npm install duplicate-file-finder
 ```
@@ -53,7 +56,7 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="https://github.com/mattriley/duplicate-file-finder#user-content-link-1">View it on GitHub</a></p>
+###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="undefined#user-content-link-1">View it on GitHub</a></p>
 ```mermaid
 graph TD;
     commands-->strategies;

@@ -1,19 +1,8 @@
-# Duplicate File Finder
-
-<%- lib.renderMetrics() %>
-
-Finds duplicate files across given directories without hashing.
-
-## Table of Contents
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<%- lib.renderOpening() %>
 
 ## Install
 
-```
-npm install duplicate-file-finder
-```
+<%- await lib.renderCode('npm install duplicate-file-finder', '', 'https://www.npmjs.com/package/duplicate-file-finder'); %>
 
 ## Usage
 
