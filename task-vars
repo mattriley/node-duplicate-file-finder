@@ -1,7 +1,6 @@
 #!/bin/bash
 
 export DISPLAY_NAME="Duplicate File Finder"
-export GITHUB_REPO_NAME="node-duplicate-file-finder"
 export ITERMOCIL_TASKS="edit | test-watch | indexgen-watch"
 
 export COV_BRANCHES=87
