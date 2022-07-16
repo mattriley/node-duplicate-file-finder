@@ -1,6 +1,6 @@
 {
     "name": "duplicate-file-finder",
-    "version": "0.2.9",
+    "version": "0.2.10",
     "description": "Finds duplicate files across given directories without hashing.",
     "license": "ISC",
     "homepage": "https://github.com/mattriley/node-duplicate-file-finder",
@@ -26,10 +26,10 @@
     },
     "dependencies": {
         "fast-glob": "^3.2.11",
-        "module-composer": "^0.55.0"
+        "module-composer": "^0.56.0"
     },
     "devDependencies": {
-        "task-library": "^0.6.4",
+        "task-library": "^0.6.6",
         "zora": "^5.0.4",
         "zora-reporters": "^1.3.2"
     }

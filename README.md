@@ -1,4 +1,4 @@
-# duplicate-file-finder
+# Duplicate File Finder
 
 
 <p align="right">
