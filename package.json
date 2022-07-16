@@ -1,29 +1,35 @@
 {
     "name": "duplicate-file-finder",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "description": "Finds duplicate files across given directories without hashing.",
-    "author": "Matt Riley",
+    "homepage": "https://github.com/mattriley/node-duplicate-file-finder",
     "license": "ISC",
-    "homepage": "https://github.com/mattriley/duplicate-file-finder",
+    "author": {
+        "name": "Matt Riley",
+        "email": "m@ttriley.dev",
+        "url": "https://github.com/mattriley"
+    },
     "repository": "github:mattriley/duplicate-file-finder",
+    "bugs": {
+        "url": "https://github.com/mattriley/node-duplicate-file-finder/issues",
+        "email": "m@ttriley.dev"
+    },
     "main": "./src/app.js",
     "files": [
         "src",
         "index.js"
     ],
     "scripts": {
-        "test": "./task test"
+        "test": "npx task test",
+        "start": "npx task start"
     },
     "dependencies": {
         "fast-glob": "^3.2.11",
-        "module-composer": "^0.52.0"
+        "module-composer": "^0.54.0"
     },
     "devDependencies": {
-        "task-library": "^0.3.31",
+        "task-library": "^0.6.0",
         "zora": "^5.0.4",
         "zora-reporters": "^1.3.2"
-    },
-    "publishConfig": {
-        "access": "public"
     }
 }

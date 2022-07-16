@@ -1,18 +1,19 @@
-# Duplicate File Finder
+# duplicate-file-finder
+
 
 <p align="right">
     <code>87.13% cov</code>&nbsp;
     <code>219 sloc</code>&nbsp;
     <code>24 files</code>&nbsp;
     <code>2 deps</code>&nbsp;
-    <code>3 dev deps</code></p>
+    <code>3 dev deps</code>
+</p>
 
 Finds duplicate files across given directories without hashing.
 
-## Table of Contents
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
 
 - [Install](#install)
 - [Usage](#usage)
@@ -56,7 +57,7 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="undefined#user-content-link-1">View it on GitHub</a></p>
+###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="https://github.com/mattriley/node-duplicate-file-finder#user-content-link-1">View it on GitHub</a></p>
 ```mermaid
 graph TD;
     commands-->strategies;
