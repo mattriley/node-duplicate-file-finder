@@ -6,7 +6,7 @@
     <code>219 sloc</code>&nbsp;
     <code>24 files</code>&nbsp;
     <code>2 deps</code>&nbsp;
-    <code>3 dev deps</code>
+    <code>7 dev deps</code>
 </p>
 
 Finds duplicate files across given directories without hashing.
