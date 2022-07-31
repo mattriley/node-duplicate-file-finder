@@ -36,6 +36,7 @@
         "doctoc": "^2.2.0",
         "eslint": "^8.20.0",
         "husky": "^8.0.1",
+        "module-indexgen": "^0.15.2",
         "task-library": "^0.40.0",
         "zora": "^5.0.4",
         "zora-reporters": "^1.3.2"

@@ -5,9 +5,10 @@ module.exports = ({ configs }) => {
 
     const { compose } = composer(modules, configs);
     const { strategies } = compose('strategies');
-    const { io } = compose('io', {}, io => io.setup());
-    const { services } = compose('services', { strategies, io });
-    compose('commands', { strategies, services });
+    const { io } = compose('io');
+    const { lib } = compose('lib');
+    const { effects } = compose('effects', { strategies, lib, io });
+    compose('commands', { strategies, effects, lib });
     return compose.end();
 
 };

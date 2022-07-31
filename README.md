@@ -2,11 +2,11 @@
 
 
 <p align="right">
-    <code>87.13% cov</code>&nbsp;
-    <code>219 sloc</code>&nbsp;
-    <code>24 files</code>&nbsp;
+    <code>87.31% cov</code>&nbsp;
+    <code>223 sloc</code>&nbsp;
+    <code>25 files</code>&nbsp;
     <code>2 deps</code>&nbsp;
-    <code>7 dev deps</code>
+    <code>8 dev deps</code>
 </p>
 
 Finds duplicate files across given directories without hashing.
@@ -61,7 +61,9 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 ```mermaid
 graph TD;
     commands-->strategies;
-    commands-->services;
-    services-->strategies;
-    services-->io;
+    commands-->effects;
+    commands-->lib;
+    effects-->strategies;
+    effects-->lib;
+    effects-->io;
 ```
