@@ -1,15 +1,10 @@
 # Duplicate File Finder
 
-
-<p align="right">
-    <code>87.31% cov</code>&nbsp;
-    <code>223 sloc</code>&nbsp;
-    <code>25 files</code>&nbsp;
-    <code>2 deps</code>&nbsp;
-    <code>8 dev deps</code>
-</p>
+<p align="right"><code>87.31% cov</code>&nbsp;<code>223 sloc</code>&nbsp;<code>25 files</code>&nbsp;<code>2 deps</code>&nbsp;<code>12 dev deps</code></p>
 
 Finds duplicate files across given directories without hashing.
+
+<br />
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
