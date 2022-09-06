@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ITERMOCIL_TASKS="edit | test-watch | barrel-gen-watch"
+export DEV_TASKS="edit | test-watch | barrel-gen-watch"
 export TEST_RUNNER="zora"
 
 export COV_BRANCHES=87
