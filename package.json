@@ -28,19 +28,19 @@
         "test": "npx task test"
     },
     "dependencies": {
-        "fast-glob": "^3.2.11",
-        "module-composer": "^0.61.0"
+        "fast-glob": "^3.2.12",
+        "module-composer": "^0.85.0"
     },
     "devDependencies": {
         "cloc": "^2.10.0",
-        "doctoc": "^2.2.0",
+        "doctoc": "^2.2.1",
         "ejs": "^3.1.8",
-        "eslint": "^8.23.0",
+        "eslint": "^8.24.0",
         "eslint-plugin-import": "^2.26.0",
         "husky": "^8.0.1",
-        "module-indexgen": "^0.19.0",
-        "npm-check-updates": "^16.1.0",
-        "task-library": "^0.161.0",
+        "module-indexgen": "^0.21.0",
+        "npm-check-updates": "^16.3.4",
+        "task-library": "^0.189.0",
         "testing": "file:./testing",
         "zora": "^5.1.0",
         "zora-reporters": "^1.4.0"

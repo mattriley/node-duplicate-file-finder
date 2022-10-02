@@ -33,4 +33,4 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 ## Architecture
 
-<%- await lib.compose(c => lib.renderCode(c.mermaid(), 'mermaid')) %>
+<%- await lib.renderModuleDiagram() %>

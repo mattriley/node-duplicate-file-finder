@@ -62,3 +62,7 @@ graph TD;
     effects-->lib;
     effects-->io;
 ```
+<p align="center">
+  <em>This diagram was generated with <a href="https://github.com/mattriley/node-module-composer">Module Composer</a></em>
+</p>
+<br>
