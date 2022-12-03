@@ -24,25 +24,26 @@
         "deploy": "npx task deploy",
         "lint": "npx task lint",
         "pre": "npx task pre",
+        "setup": "nvm use && npm i && npx task setup",
         "start": "npx task start",
         "test": "npx task test"
     },
     "dependencies": {
         "fast-glob": "^3.2.12",
-        "module-composer": "^0.87.0"
+        "module-composer": "^0.92.0"
     },
     "devDependencies": {
         "cloc": "^2.10.0",
         "doctoc": "^2.2.1",
         "ejs": "^3.1.8",
-        "eslint": "^8.26.0",
+        "eslint": "^8.29.0",
         "eslint-plugin-import": "^2.26.0",
-        "husky": "^8.0.1",
+        "husky": "^8.0.2",
         "module-indexgen": "^0.21.0",
-        "npm-check-updates": "^16.3.15",
-        "task-library": "^0.189.0",
+        "npm-check-updates": "^16.4.3",
+        "task-library": "^0.194.0",
         "testing": "file:./testing",
-        "zora": "^5.1.0",
+        "zora": "^5.2.0",
         "zora-reporters": "^1.4.0"
     }
 }
