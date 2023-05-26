@@ -1,5 +1,5 @@
 module.exports = {
-    commands: require('./commands'),
-    lib: require('./lib'),
-    strategies: require('./strategies')
+    app: require('./app'),
+    compose: require('./compose'),
+    modules: require('./modules')
 };
