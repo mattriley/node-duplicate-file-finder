@@ -1,6 +1,6 @@
 # Duplicate File Finder
 
-<p align="right"><code>89.32% cov</code>&nbsp;<code>218 sloc</code>&nbsp;<code>24 files</code>&nbsp;<code>2 deps</code>&nbsp;<code>10 dev deps</code></p>
+<p align="right"><code>89.01% cov</code>&nbsp;<code>218 sloc</code>&nbsp;<code>24 files</code>&nbsp;<code>2 deps</code>&nbsp;<code>10 dev deps</code></p>
 
 Finds duplicate files across given directories without hashing.
 
