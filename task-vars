@@ -3,9 +3,9 @@
 export NODE_VERSION="20.2.0"
 
 export DEV_TASKS="edit | test-watch | barrel-gen-watch"
-export TEST_RUNNER="custom"
+export TEST_RUNNER="module-testrunner"
 
-export COV_BRANCHES="87"
-export COV_LINES="87"
-export COV_FUNCTIONS="87"
-export COV_STATEMENTS="87"
+export COV_BRANCHES=87
+export COV_LINES=87
+export COV_FUNCTIONS=87
+export COV_STATEMENTS=87

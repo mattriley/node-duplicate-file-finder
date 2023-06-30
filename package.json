@@ -39,8 +39,9 @@
         "eslint-plugin-import": "^2.27.5",
         "husky": "^8.0.3",
         "module-indexgen": "^0.34.0",
+        "module-testrunner": "^0.3.0",
         "npm-check-updates": "^16.10.13",
-        "task-library": "^0.230.0",
+        "task-library": "^0.233.0",
         "testing": "file:./testing"
     }
 }
