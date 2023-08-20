@@ -1,9 +1,9 @@
-module.exports = ({ test, assert }) => ({ findDuplicates }) => {
+module.exports = ({ test, assert, main }) => {
 
     test('finds duplicates', async () => {
         const sourcePath = 'test-files/source-path';
         const searchPaths = ['test-files/search-path-1', 'test-files/search-path-2'];
-        const duplicates = await findDuplicates({ sourcePath, searchPaths });
+        const duplicates = await main.findDuplicates({ sourcePath, searchPaths });
         assert.deepEqual(duplicates, [
             [
                 'test-files/source-path/A-1-201KB.JPG',

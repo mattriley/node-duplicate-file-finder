@@ -28,20 +28,20 @@
         "test": "npx task test"
     },
     "dependencies": {
-        "fast-glob": "^3.2.12",
-        "module-composer": "^0.124.0"
+        "fast-glob": "^3.3.1",
+        "module-composer": "^0.125.0"
     },
     "devDependencies": {
         "cloc": "^2.11.0",
         "doctoc": "^2.2.1",
         "ejs": "^3.1.9",
-        "eslint": "^8.43.0",
-        "eslint-plugin-import": "^2.27.5",
+        "eslint": "^8.47.0",
+        "eslint-plugin-import": "^2.28.1",
         "husky": "^8.0.3",
-        "module-indexgen": "^0.34.0",
-        "module-testrunner": "^0.3.0",
-        "npm-check-updates": "^16.10.13",
-        "task-library": "^0.233.0",
+        "module-indexgen": "^0.37.0",
+        "module-testrunner": "^0.18.0",
+        "npm-check-updates": "^16.12.2",
+        "task-library": "^0.265.0",
         "testing": "file:./testing"
     }
 }
