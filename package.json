@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "fast-glob": "^3.3.1",
-        "module-composer": "^0.149.0"
+        "module-composer": "^0.150.0"
     },
     "devDependencies": {
         "cloc": "^2.11.0",
@@ -38,10 +38,10 @@
         "eslint": "^8.48.0",
         "eslint-plugin-import": "^2.28.1",
         "husky": "^8.0.3",
-        "module-indexgen": "^0.38.0",
+        "module-indexgen": "^0.39.0",
         "module-testrunner": "^0.20.0",
         "npm-check-updates": "^16.13.2",
-        "task-library": "^0.269.0",
+        "task-library": "^0.270.0",
         "testing": "file:./testing"
     }
 }
