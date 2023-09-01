@@ -29,19 +29,19 @@
     },
     "dependencies": {
         "fast-glob": "^3.3.1",
-        "module-composer": "^0.125.0"
+        "module-composer": "^0.149.0"
     },
     "devDependencies": {
         "cloc": "^2.11.0",
         "doctoc": "^2.2.1",
         "ejs": "^3.1.9",
-        "eslint": "^8.47.0",
+        "eslint": "^8.48.0",
         "eslint-plugin-import": "^2.28.1",
         "husky": "^8.0.3",
-        "module-indexgen": "^0.37.0",
-        "module-testrunner": "^0.18.0",
-        "npm-check-updates": "^16.12.2",
-        "task-library": "^0.265.0",
+        "module-indexgen": "^0.38.0",
+        "module-testrunner": "^0.20.0",
+        "npm-check-updates": "^16.13.2",
+        "task-library": "^0.269.0",
         "testing": "file:./testing"
     }
 }

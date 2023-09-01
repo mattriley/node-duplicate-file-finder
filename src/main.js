@@ -1,4 +1,3 @@
 const compose = require('./compose');
-const { modules } = compose({});
-const { commands, strategies } = modules;
+const { commands, strategies } = compose();
 module.exports = { ...commands, strategies };
