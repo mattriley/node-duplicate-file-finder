@@ -55,12 +55,12 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 ###### <p align="right"><em>Can't see the diagram?</em> <a id="link-1" href="https://github.com/mattriley/node-duplicate-file-finder#user-content-link-1">View it on GitHub</a></p>
 ```mermaid
 graph TD;
-    commands-->strategies;
-    commands-->effects;
-    commands-->lib;
     effects-->strategies;
     effects-->lib;
     effects-->io;
+    commands-->strategies;
+    commands-->effects;
+    commands-->lib;
 ```
 <p align="center">
   <em>This diagram was generated with <a href="https://github.com/mattriley/node-module-composer">Module Composer</a></em>
